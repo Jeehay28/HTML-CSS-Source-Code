@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Practice - Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            padding: 20px;
+            float: left;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-shadow: 1px 1px 1px #ccc;
+            margin-left: -150px;
+            transition: all 1s;
+        }
+
+        .card:hover + .card {
+            margin-left: -10px;
+        }
+
+        .card:hover {
+            background-image: linear-gradient(to right bottom, rgb(105, 238, 105), rgb(255, 255, 0));
+        }
+
+       
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, eos?</p>
+        </div>
+    </div>
+</body>
+</html>
