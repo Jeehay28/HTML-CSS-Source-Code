@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: calc(90% - 300px);
+            float: left;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+            background-color: blue;
+        }
+
+        .content {
+            width: 100%;
+            height: 400px;
+            background-color: yellow;
+        }
+
+        .right-side {
+            width: 300px;
+            float: left;
+            background-color: aqua;
+        }
+
+        footer {
+            clear: both;
+            width: 90%;
+            background-color: maroon;
+        }
+     
+       header h1,  footer h2 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: 120px;
+       }
+
+       .content h2 {
+        text-align: center;
+        line-height: 400px;
+       }
+
+       .right-side h2 {
+            line-height: 520px;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Header</h1>
+        </header>
+
+        <section class="content">
+            <h2>Main</h2>
+        </section>
+    </div>
+
+    <aside class="right-side">
+        <h2>Sidebar</h2>
+    </aside>
+    
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
+
+
