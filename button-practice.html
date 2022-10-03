@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button practice</title>
+    <style>
+        body {
+      background-color: purple;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .button {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  outline: 2px solid #fff;
+  padding: 30px 60px;
+  overflow: hidden;
+  /* 버튼 크기를 벗어나는 요소 감추기 */
+  position: relative;
+}
+
+.button::before {
+  background-color: #fff;
+  content: "";
+  position: absolute;
+  top:0;
+  left: -50px;
+  width: 0;
+  height: 100%;
+  transform: skewX(35deg);
+  z-index: -5;
+  transition: width 1s ;
+}
+
+.button:hover {
+  color : #833ab4;
+}
+
+.button:hover::before{
+  width: 150%;
+}
+
+.button-1 {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-top: 50px;
+  outline: 2px solid #fff;
+  padding: 30px 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.button-1::before {
+    background-color: white;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 0;
+    height: 100%;
+    transform: skewX(-45deg);
+    z-index: -5;
+    transition: width 2s;
+}
+
+
+.button-1:hover {
+    color :#833ab4;
+}
+
+.button-1:hover::before {
+    width: 200%;
+}
+
+
+    </style>
+</head>
+<body>
+            <a href="#" class="button">What we have once enjoyed we can never lose. All that we love deeply becomes a part of us.
+            </a>
+            <a href="#" class="button-1"> -Hellen Keller</a>
+        
+       
+
+    
+</body>
+</html>
