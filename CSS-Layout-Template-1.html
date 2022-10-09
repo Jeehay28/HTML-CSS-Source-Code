@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template using Float</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        .header {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+            clear: both;
+            content: "";
+            display: table;
+        }
+
+        /* Style the footer */
+        .footer {
+            /* clear: left; */
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>Header, equal columns and footer:</h1>
+    <p>In this example, we have created a header, three equal columns and a footer. </p>
+
+    <!-- Header -->
+    <div class="header" style="background-color: #aaa;">
+       <h2>Header</h2>
+    </div>
+
+    <!-- Columns -->
+    <div class="row">
+        <div class="column" style="background-color: #bbb;">Column</div>
+        <div class="column" style="background-color: #ccc;">Column</div>
+        <div class="column" style="background-color: #ddd;">Column</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" style="background-color: #eee;">
+        <p>Footer</p>
+    </div>
+    
+</body>
+</html>
