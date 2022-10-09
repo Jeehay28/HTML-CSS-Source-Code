@@ -4,57 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Template using using float</title>
-
+    <title>CSS Template using Flexbox</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         .header {
-            margin-top: 20px;
+            background-color: bisque;
             text-align: center;
             padding: 10px;
-            background-color: #ffc0cb;
+            margin-top: 20px;
         }
 
+        .row {
+            display: flex;
+        }
+        
         .column {
-            float: left;
-            width: 33.33%;
-            height: 100px;
             padding: 10px;
         }
 
-        .column .side {
-            width: 25%;
+        .column.side {
+            flex: 1;
         }
 
-        .column .side {
-            width: 50%;
-        }
-
-        .row::after {
-            content: "";
-            display: table;
-            clear: both;
+        .column.middle {
+   
+            flex: 2;
         }
 
         .footer {
-            /* clear: left; */
-            padding: 10px;
+            background-color: beige;
             text-align: center;
-            background-color: #ff81c0;
+            padding: 10px;
         }
-
+    
         @media screen and (max-width:600px) {
-            .column {
-                width: 100%;
+            .row {
+                flex-direction: column;
             }
             
         }
-
 
     </style>
 
@@ -68,14 +61,14 @@
     </div>
 
     <div class="row">
-        <div class="column side" style="background-color: #dda0dd;">Column</div>
-        <div class="column middle" style="background-color: #da70d6;">Column</div>
-        <div class="column side" style="background-color: #ee82ee;">Column</div>
+        <div class="column side" style="background-color: #aaa;">Column</div>
+        <div class="column middle" style="background-color:#bbb ;">Column</div>
+        <div class="column side" style="background-color:#ccc ;">Column</div>        
     </div>
 
     <div class="footer">
         <h2>Footer</h2>
     </div>
-    
+
 </body>
 </html>
