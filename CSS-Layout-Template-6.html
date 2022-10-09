@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template using Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: bisque;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+        }
+        
+        .column {
+            padding: 10px;
+        }
+
+        .column.side {
+            flex: 1;
+        }
+
+        .column.middle {
+   
+            flex: 2;
+        }
+
+        .footer {
+            background-color: beige;
+            text-align: center;
+            padding: 10px;
+        }
+    
+        @media screen and (max-width:600px) {
+            .row {
+                flex-direction: column;
+            }
+            
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Header, unequal columns and footer:</h1>
+    <p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other. Resize the browser window to see the responsive effect.</p>
+    
+    <div class="header">
+        <h2>Header</h2>
+    </div>
+
+    <div class="row">
+        <div class="column side" style="background-color: #aaa;">Column</div>
+        <div class="column middle" style="background-color:#bbb ;">Column</div>
+        <div class="column side" style="background-color:#ccc ;">Column</div>        
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+</body>
+</html>
