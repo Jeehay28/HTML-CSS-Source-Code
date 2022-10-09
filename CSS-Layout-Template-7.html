@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template using Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: chartreuse;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .left {
+            grid-area: left;
+            padding: 10px;
+        }
+
+        .middle {
+            grid-area: middle;
+            padding: 10px;
+        }
+
+        .right {
+            grid-area: right;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: coral;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header'
+            'left middle middle middle middle right'
+            'footer footer footer footer footer footer'
+            ;
+        }
+
+        @media screen and (max-width:600px) {
+            .grid-container {
+                grid-template-areas: 
+                'header header header header header header'
+            'left middle middle middle middle right'
+            'footer footer footer footer footer footer'    
+            ;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Header, unequal columns and footer: using grid</h1>
+    <p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+
+    <div class="header">
+        <h2>Header</h2>
+    </div>
+
+    <div class="grid-container">
+        <div class="left" style="background-color: #aaa;">Column</div>
+        <div class="middle" style="background-color: #bbb;">Column</div>
+        <div class="right" style="background-color: #ccc;">Column</div>
+    </div>
+    
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+</body>
+</html>
