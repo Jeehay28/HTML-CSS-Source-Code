@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Template: Sidenav and content</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .side-nav {
+            width: 150px;
+            height: 100%;
+            position: fixed;
+            background-color: darkblue;
+            text-align: center;
+          
+        }
+        
+        .side-nav a {
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        .side-nav a:hover {
+            color: #000;
+            background-color: #bbb;
+        }
+
+        .content {
+            padding-top: 5px;
+            padding-left: 20px;
+            margin-left: 150px;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="side-nav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <div class="content">
+        <h2>CSS Template</h2>
+        <p>Sidenav and content:</p>
+    </div>
+
+</body>
+</html>
