@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Templates</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top-nav {
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .top-nav a {
+            float: left;
+            /* display: block; */
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+
+        .top-nav a:hover {
+            color: #000;
+            background-color: #bbb;
+        }
+
+        .content {
+            clear: left;
+            background-color: #bbb;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: #ccc;
+            padding: 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="top-nav">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <div class="content">
+        <h2>CSS Template</h2>
+        <p>A topnav, content and a footer.</p>
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+</body>
+</html>
