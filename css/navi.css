@@ -1,0 +1,114 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.2em;
+  margin: 0.3rem auto 0.3rem 1rem;
+  /* margin: 10px 5px 15px 20px; top margin is 10px. right margin is 5px. bottom margin is 15px. left margin is 20px. */
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links ul {
+  display: flex;
+}
+
+.navbar-links li a {
+  display: block;
+  color: #fff;
+  padding: 1em;
+}
+
+.navbar-links li :hover {
+  background-color: #555;
+}
+
+/* toggle btn */
+
+.toggle-button {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 21px;
+  position: fixed;
+  top : 1em;
+  right: 1em;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Hamburger button appears */
+.toggle-button {
+  display: flex;
+}
+
+/* menu in a row disappears. */
+.navbar-links {
+  display: none;
+}
+
+/* display direction changes */
+nav {
+    flex-direction: column;
+}
+
+/* when clicking hamburger button, nav-links div changes (js) */
+.navbar-links.active {
+  display: flex;
+}
+
+.navbar-links.active ul {
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar-links.active li a {
+  text-align: center;
+}
+}
+
+
+/* Main Content */
+main {
+  width:80%;
+  margin:70px auto;
+}
+
+main h2 {
+  font-size:2em;
+}
+main p {
+  font-size:1.2em;
+  line-height:2;
+  margin-bottom:20px;
+}

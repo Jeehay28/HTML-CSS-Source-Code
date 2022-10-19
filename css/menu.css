@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#bttn {
+    position: fixed;
+    right: 20px;;
+    top: 20px;
+    padding: 15px;
+    background-color: #639;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+#bttn.active {
+    transform: translateX(-125px);
+}
+/* 메뉴 형태를 만들고 x, y 값을 조정 */
+
+#nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    height: 100vh;
+    background-color: #639;
+    transform: translateX(100%);
+    /* 너비값을 지정 안했으므로 100% 전체만큼 이동 */
+    transition: 1s;
+}
+/* 버튼 클릭하면 #nav 에 .active 추가/삭제 -> toggle  */
+#nav.active {
+    transform: translateX(0);
+}
+
+#nav ul {
+    list-style: none;
+}
+#nav ul li {
+   padding: 1em;
+}
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
