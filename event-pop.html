@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop-up</title>
+  <style>
+    #container 
+    {
+      width:400px;
+      margin:10px auto;
+      padding:10px;
+      text-align:center;
+    }        
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Notice</h1>
+    <img src="images/event.png">
+    <p><a href="#" id="detail">View more information >></a></p>  
+  </div>
+  <script>
+    const url = "https://news.seoul.go.kr/culture/archives/517152";
+    const detail = document.querySelector("#detail");
+    detail.addEventListener("click", () => {
+      window.opener.location = url;
+      window.close();
+    });
+  </script>
+</body>
+</html>
