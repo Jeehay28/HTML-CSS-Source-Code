@@ -1,0 +1,37 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  height:100vh;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: url('../images/bg.jpg') no-repeat left center fixed;
+  background-size: cover;
+}
+
+#container{
+  margin-right: 15%;
+  padding:20px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  color: white;
+  border: 1px dashed rgba(223, 247, 223, 0.638);
+  border-radius: 10px;
+}
+#container div {
+  margin:10px;
+  padding: 10px;
+}
+#today {
+  font-weight: bold;
+  font-size:2.2em;
+  color: rgb(61, 251, 241);
+}
+#clock {
+  font-weight: bold;
+  font-size:2em;
+}
